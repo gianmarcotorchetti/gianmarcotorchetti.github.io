@@ -1,0 +1,93 @@
+---
+---
+
+/* Noto Sans must be imported before any rules are emitted */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import "minimal-light";
+
+/* Custom overrides: Noto Sans instead of the theme's Crimson Pro */
+body {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* Paper titles in blue */
+.paper-title {
+  color: #267CB9;
+}
+
+/* Co-authors in dark grey */
+.coauthors,
+.coauthors a {
+  color: #4a4a4a !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .paper-title {
+    color: #3eb7f0;
+  }
+
+  .coauthors,
+  .coauthors a {
+    color: #b8bac0 !important;
+  }
+}
+
+/* Custom overrides: base font size (16px) */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/* Name on a single line */
+h1 {
+  font-size: 27px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 23px;
+  }
+}
+
+/* Custom overrides: larger, square profile picture */
+.image.avatar,
+.image.avatar img {
+  border-radius: 0;
+}
+
+.image.avatar img {
+  width: 100%;
+}
+
+/* Widen the sidebar so the photo can be larger (desktop only) */
+@media screen and (min-width: 961px) {
+  .wrapper {
+    width: 1038px;
+  }
+
+  header {
+    width: 310px;
+  }
+}
+
+@media print, screen and (max-width: 960px) {
+  .image.avatar img {
+    width: 280px;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  .image.avatar img {
+    width: 220px;
+  }
+}
